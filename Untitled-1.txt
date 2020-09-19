@@ -1,0 +1,11 @@
+
+
+ Table [If[Mod[a,b]>0,1,0],{a,1,100},{b,1,a}]//ArrayPlot; 
+Total/@Table [If[Mod[a,b]>0,1,0],{a,1,100},{b,1,a}];
+{Count[#,0],Count[#,1]}&/@Table [If[Mod[a,b]>0,1,0],{a,1,100},{b,1,a}];
+FromContinuedFraction/@Table [If[Mod[a,b]>0,1,0],{a,5,1000},{b,1,a}]//ListPlot
+
+FromContinuedFraction/@Table [Mod[a,b],{a,5,1000},{b,1,a}]//ListPlot
+$Aborted
+Table [Mod[a,b],{a,1,20},{b,1,20}]//Det
+

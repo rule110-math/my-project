@@ -11,4 +11,21 @@ FromContinuedFraction/@Table [If[Mod[a,b]>0,1,0],{a,5,1000},{b,1,a}]//ListPlot
 
 FromContinuedFraction/@Table [Mod[a,b],{a,5,1000},{b,1,a}]//ListPlot
 
+x = 
+ Unevaluated@
+   Table [If[b > a, 0, If[Mod[a, b] == 0, 1, 0]], {a, 1, n}, {b, 1, 
+     n}] /. n -> 10; x // MatrixForm;
 
+ y = Range[10]
+
+{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+ m = LinearSolve[x, y]
+{1, 1, 2, 2, 4, 2, 6, 4, 6, 4}
+Array[EulerPhi, 10]
+
+ {1, 1, 2, 2, 4, 2, 6, 4, 6, 4}
+
+ g = x // Inverse;
+ LinearSolve[g, m]
+
+{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}

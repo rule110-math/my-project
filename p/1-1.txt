@@ -10,7 +10,7 @@ Total/@Table [If[Mod[a,b]>0,1,0],{a,1,100},{b,1,a}];
 FromContinuedFraction/@Table [If[Mod[a,b]>0,1,0],{a,5,1000},{b,1,a}]//ListPlot
 
 FromContinuedFraction/@Table [Mod[a,b],{a,5,1000},{b,1,a}]//ListPlot
-
+--------------------------------------------------------------------------------------------------------------
 x = 
  Unevaluated@
    Table [If[b > a, 0, If[Mod[a, b] == 0, 1, 0]], {a, 1, n}, {b, 1, 
